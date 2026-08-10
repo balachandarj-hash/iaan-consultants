@@ -2,19 +2,21 @@ import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
 import './App.css'
 
+const asset = (file: string) => `${import.meta.env.BASE_URL}images/${file}`
+
 const verticals = [
   {
     id: 'solar',
     index: '01',
     title: 'Solar Plant Installation',
     summary:
-      'End-to-end engineering oversight for industrial and commercial solar plants — installation integrity, safety, and commissioning readiness.',
-    image:
-      'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1600&q=80',
+      'Engineering oversight for industrial and commercial solar plants across Tamil Nadu — from rooftop arrays on factory sheds to ground-mount systems ready for commissioning.',
+    image: asset('solar.jpg'),
+    imageAlt: 'Rooftop solar panels on an industrial factory building in India',
     services: [
-      'Solar plant installation inspection',
-      'Rooftop and ground-mount system review',
-      'Structural and mounting verification',
+      'Industrial rooftop and ground-mount solar inspection',
+      'Structural and mounting verification for factory roofs',
+      'Installation integrity and safety review',
       'Commissioning documentation support',
     ],
   },
@@ -23,14 +25,14 @@ const verticals = [
     index: '02',
     title: 'Fire Safety',
     summary:
-      'Industrial fire and life-safety programmes that protect people, plant assets, and uninterrupted production.',
-    image:
-      'https://images.unsplash.com/photo-1592838754746-4af9f09f526f?auto=format&fit=crop&w=1600&q=80',
+      'Industrial fire safety for large buildings, factories, warehouses and plant campuses — protecting people, assets and uninterrupted production.',
+    image: asset('fire.jpg'),
+    imageAlt: 'Large Indian industrial building with fire hydrant and safety infrastructure',
     services: [
-      'External safety audits',
-      'Fall-arrest and lifeline inspection',
-      'Industrial ventilation assessment',
-      'Lifting equipment certification',
+      'Fire safety audits for factories and large buildings',
+      'Hydrant, hose reel and fire-protection system checks',
+      'Life-safety, exit and emergency preparedness review',
+      'Industrial ventilation and high-risk area assessment',
     ],
   },
   {
@@ -38,13 +40,13 @@ const verticals = [
     index: '03',
     title: 'Compliance',
     summary:
-      'Statutory inspections and Chartered Engineering certifications trusted by factories, MSMEs, banks, and institutions.',
-    image:
-      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80',
+      'Statutory inspections and Chartered Engineering certifications for Indian factories, MSMEs, banks and institutions.',
+    image: asset('compliance.jpg'),
+    imageAlt: 'Indian engineer inspecting machinery inside a manufacturing plant',
     services: [
-      'Competent Person inspections',
+      'Competent Person inspections under Tamil Nadu Factories Rules',
       'Factory building stability certification',
-      'Equipment fitness certificates',
+      'Equipment fitness and machinery installation certificates',
       'Plant & machinery valuation',
     ],
   },
@@ -53,9 +55,9 @@ const verticals = [
     index: '04',
     title: 'ISO Audit & Certification',
     summary:
-      'Structured ISO assessment, internal audit preparation, and certification guidance aligned to industrial operations.',
-    image:
-      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80',
+      'Practical ISO assessment, internal audit preparation and certification guidance aligned to Indian industrial operations.',
+    image: asset('iso.jpg'),
+    imageAlt: 'ISO audit discussion with Indian professionals in an industrial office',
     services: [
       'ISO gap analysis and assessment',
       'Internal audit preparation',
@@ -86,7 +88,6 @@ function App() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [submitted, setSubmitted] = useState(false)
-  const [activeVertical, setActiveVertical] = useState(verticals[0].id)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -113,14 +114,13 @@ function App() {
           }
         })
       },
-      { threshold: 0.16 },
+      { threshold: 0.14 },
     )
     items.forEach((item) => observer.observe(item))
     return () => observer.disconnect()
   }, [])
 
   const closeMenu = () => setMenuOpen(false)
-  const active = verticals.find((item) => item.id === activeVertical) ?? verticals[0]
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -162,11 +162,11 @@ function App() {
             <a href="#about" onClick={closeMenu}>
               About
             </a>
-            <a href="#clients" onClick={closeMenu}>
-              Clients
+            <a href="#contact" onClick={closeMenu}>
+              Contact
             </a>
             <a className="nav-cta" href="#contact" onClick={closeMenu}>
-              Contact
+              Enquire
             </a>
           </nav>
         </div>
@@ -175,10 +175,7 @@ function App() {
       <main id="top">
         <section className="hero">
           <div className="hero-media" aria-hidden="true">
-            <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2400&q=80"
-              alt=""
-            />
+            <img src={asset('hero.jpg')} alt="" />
           </div>
           <div className="hero-shade" aria-hidden="true" />
           <div className="container hero-content">
@@ -187,16 +184,15 @@ function App() {
                 IAAN <em>CONSULTANTSS</em>
               </p>
               <h1 className="hero-headline">
-                Engineering confidence for industry.
+                Industrial assurance for Indian plants and large buildings.
               </h1>
               <p className="hero-copy">
-                A Chennai-based industrial consultancy delivering solar plant
-                installation, fire safety, compliance, and ISO audit &amp;
-                certification with precision and integrity.
+                Chennai-based consultancy for solar plant installation, industrial
+                fire safety, statutory compliance and ISO audit &amp; certification.
               </p>
               <div className="hero-actions">
                 <a className="btn btn-primary" href="#verticals">
-                  Our verticals
+                  View verticals
                 </a>
                 <a className="btn btn-ghost" href="#contact">
                   Speak with us
@@ -210,7 +206,7 @@ function App() {
           <div className="container trust-grid">
             <div>
               <strong>2014</strong>
-              <span>Established</span>
+              <span>Established in Chennai</span>
             </div>
             <div>
               <strong>100+</strong>
@@ -227,73 +223,41 @@ function App() {
           </div>
         </section>
 
-        <section className="section verticals" id="verticals">
-          <div className="container">
-            <div className="section-intro" data-reveal>
-              <p className="eyebrow">Business verticals</p>
-              <h2 className="section-title">Four practices. One standard of excellence.</h2>
-              <p className="section-lead">
-                IAAN CONSULTANTSS is structured around four specialised verticals —
-                each delivered with the same disciplined engineering approach.
-              </p>
-            </div>
-
-            <div className="vertical-showcase" data-reveal>
-              <div className="vertical-tabs" role="tablist" aria-label="Verticals">
-                {verticals.map((item) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    role="tab"
-                    aria-selected={activeVertical === item.id}
-                    className={`vertical-tab${activeVertical === item.id ? ' active' : ''}`}
-                    onClick={() => setActiveVertical(item.id)}
-                  >
-                    <span className="vertical-tab-index">{item.index}</span>
-                    <span className="vertical-tab-title">{item.title}</span>
-                  </button>
-                ))}
-              </div>
-
-              <div className="vertical-panel" role="tabpanel">
-                <div className="vertical-panel-media">
-                  <img key={active.id} src={active.image} alt="" />
-                </div>
-                <div className="vertical-panel-copy">
-                  <p className="eyebrow">Vertical {active.index}</p>
-                  <h3>{active.title}</h3>
-                  <p>{active.summary}</p>
-                  <ul className="service-list">
-                    {active.services.map((service) => (
-                      <li key={service}>{service}</li>
-                    ))}
-                  </ul>
-                  <a className="text-link" href="#contact">
-                    Request this service <span aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="vertical-mobile-list">
-              {verticals.map((item, index) => (
-                <article
-                  key={item.id}
-                  className="vertical-mobile-card"
-                  data-reveal
-                  style={{ transitionDelay: `${index * 60}ms` }}
-                >
-                  <img src={item.image} alt="" loading="lazy" />
-                  <div>
-                    <p className="vertical-tab-index">{item.index}</p>
-                    <h3>{item.title}</h3>
-                    <p>{item.summary}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
+        <section className="section verticals-intro" id="verticals">
+          <div className="container section-intro" data-reveal>
+            <p className="eyebrow">Business verticals</p>
+            <h2 className="section-title">Built for Indian industry</h2>
+            <p className="section-lead">
+              Four specialised practices serving factories, warehouses, process plants
+              and large commercial buildings across Tamil Nadu.
+            </p>
           </div>
         </section>
+
+        {verticals.map((item, index) => (
+          <section
+            key={item.id}
+            id={item.id}
+            className={`vertical-band${index % 2 === 1 ? ' reverse' : ''}${index % 2 === 0 ? ' band-tint' : ''}`}
+          >
+            <div className="vertical-band-media" data-reveal>
+              <img src={item.image} alt={item.imageAlt} loading="lazy" />
+            </div>
+            <div className="vertical-band-copy" data-reveal>
+              <p className="eyebrow">Vertical {item.index}</p>
+              <h2>{item.title}</h2>
+              <p>{item.summary}</p>
+              <ul className="service-list">
+                {item.services.map((service) => (
+                  <li key={service}>{service}</li>
+                ))}
+              </ul>
+              <a className="btn btn-dark" href="#contact">
+                Request this service
+              </a>
+            </div>
+          </section>
+        ))}
 
         <section className="section expertise" id="expertise">
           <div className="container expertise-grid">
@@ -301,8 +265,8 @@ function App() {
               <p className="eyebrow">How we work</p>
               <h2 className="section-title">A single window for industrial assurance</h2>
               <p className="section-lead">
-                From statutory inspections to certification programmes, we help
-                manufacturing and process industries remain safe, compliant, and
+                From statutory inspections to fire safety and ISO programmes, we help
+                Indian manufacturing and process industries stay safe, compliant and
                 productive.
               </p>
             </div>
@@ -310,12 +274,12 @@ function App() {
               <div className="step">
                 <span>01</span>
                 <h3>Assess</h3>
-                <p>Site review, statutory mapping, and clear identification of gaps.</p>
+                <p>Site review, statutory mapping and clear identification of gaps.</p>
               </div>
               <div className="step">
                 <span>02</span>
                 <h3>Certify</h3>
-                <p>Competent Person inspections, audits, and documentation you can rely on.</p>
+                <p>Competent Person inspections, audits and documentation you can rely on.</p>
               </div>
               <div className="step">
                 <span>03</span>
@@ -330,15 +294,15 @@ function App() {
           <div className="container about-grid">
             <div data-reveal>
               <p className="eyebrow">About the firm</p>
-              <h2 className="section-title">Built on technical depth and ethical practice</h2>
+              <h2 className="section-title">Technical depth for Indian industry</h2>
               <p className="about-story">
                 Founded in 2014 by Rajamuthupandy Subramanian, Mechanical Engineer and
                 Chartered Engineer, IAAN CONSULTANTSS serves process industries, power,
-                cement, oil &amp; gas, automobile manufacturing, and MSMEs across Tamil Nadu.
+                cement, oil &amp; gas, automobile manufacturing and MSMEs across Tamil Nadu.
               </p>
               <p className="about-story">
-                Our mission is simple: help industries stay <em>Safe, Compliant and
-                Productive</em> through professional engineering expertise.
+                Our mission: help industries stay <em>Safe, Compliant and Productive</em>{' '}
+                through professional engineering expertise.
               </p>
             </div>
             <aside className="about-panel" data-reveal>
@@ -372,7 +336,7 @@ function App() {
           <div className="container cta-inner" data-reveal>
             <div>
               <p className="eyebrow">Engage IAAN</p>
-              <h2>Ready to strengthen your plant’s compliance posture?</h2>
+              <h2>Need support for your plant or large building?</h2>
             </div>
             <a className="btn btn-primary" href="#contact">
               Begin a conversation
@@ -434,7 +398,7 @@ function App() {
               </div>
               <div className="field">
                 <label htmlFor="vertical">Vertical of interest</label>
-                <select id="vertical" name="vertical" defaultValue="compliance">
+                <select id="vertical" name="vertical" defaultValue="fire-safety">
                   <option value="solar">Solar Plant Installation</option>
                   <option value="fire-safety">Fire Safety</option>
                   <option value="compliance">Compliance</option>
@@ -447,7 +411,7 @@ function App() {
                   id="message"
                   name="message"
                   required
-                  placeholder="Site type, equipment, or certification needed."
+                  placeholder="Plant type, building, or certification needed."
                 />
               </div>
               <button className="btn btn-primary" type="submit">
@@ -470,15 +434,15 @@ function App() {
               IAAN <em>CONSULTANTSS</em>
             </p>
             <p className="footer-tagline">
-              Industrial inspection &amp; engineering consultancy
+              Industrial inspection &amp; engineering consultancy · Chennai
             </p>
           </div>
           <div>
             <h4>Verticals</h4>
-            <a href="#verticals">Solar Plant Installation</a>
-            <a href="#verticals">Fire Safety</a>
-            <a href="#verticals">Compliance</a>
-            <a href="#verticals">ISO Audit &amp; Certification</a>
+            <a href="#solar">Solar Plant Installation</a>
+            <a href="#fire-safety">Fire Safety</a>
+            <a href="#compliance">Compliance</a>
+            <a href="#iso">ISO Audit &amp; Certification</a>
           </div>
           <div>
             <h4>Company</h4>
