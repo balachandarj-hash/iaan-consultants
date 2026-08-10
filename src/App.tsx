@@ -10,7 +10,7 @@ const verticals = [
     summary:
       'End-to-end engineering oversight for industrial and commercial solar plants — installation integrity, safety, and commissioning readiness.',
     image:
-      'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1600&q=80',
     services: [
       'Solar plant installation inspection',
       'Rooftop and ground-mount system review',
@@ -25,7 +25,7 @@ const verticals = [
     summary:
       'Industrial fire and life-safety programmes that protect people, plant assets, and uninterrupted production.',
     image:
-      'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1592838754746-4af9f09f526f?auto=format&fit=crop&w=1600&q=80',
     services: [
       'External safety audits',
       'Fall-arrest and lifeline inspection',
@@ -40,7 +40,7 @@ const verticals = [
     summary:
       'Statutory inspections and Chartered Engineering certifications trusted by factories, MSMEs, banks, and institutions.',
     image:
-      'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80',
     services: [
       'Competent Person inspections',
       'Factory building stability certification',
@@ -55,7 +55,7 @@ const verticals = [
     summary:
       'Structured ISO assessment, internal audit preparation, and certification guidance aligned to industrial operations.',
     image:
-      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80',
     services: [
       'ISO gap analysis and assessment',
       'Internal audit preparation',
