@@ -95,18 +95,38 @@ export function AboutPage() {
                 Head of Solar Division and Marketing
               </p>
               <p className="leader-bio">
-                Leads IAAN&apos;s solar division and marketing with 22+ years of
-                experience supporting client engagement and solar project delivery.
+                With over two decades in solar plant installation and marketing
+                leadership, he guides IAAN&apos;s solar division from client
+                engagement through project delivery—helping industries and
+                commercial facilities adopt reliable renewable energy solutions
+                while strengthening market presence across Tamil Nadu.
               </p>
+              <ul className="check-list leader-card-list">
+                <li>Solar plant installation oversight</li>
+                <li>Renewable energy project delivery</li>
+                <li>Client engagement &amp; business development</li>
+                <li>Marketing strategy for engineering services</li>
+                <li>Commercial &amp; industrial solar solutions</li>
+              </ul>
             </article>
             <article className="leader-card">
               <p className="leader-exp">17+ years</p>
               <h3>Govindarajan</h3>
               <p className="leader-role">Head of Fire Safety</p>
               <p className="leader-bio">
-                Heads the firm&apos;s fire safety practice with 17+ years of experience
-                in industrial and building fire safety.
+                With more than seventeen years in fire safety for large buildings
+                and industrial plants, he leads IAAN&apos;s fire safety practice—
+                supporting factories, warehouses and commercial facilities in
+                designing, assessing and maintaining effective fire protection
+                systems that protect people, assets and operations.
               </p>
+              <ul className="check-list leader-card-list">
+                <li>Industrial plant fire safety</li>
+                <li>Large building fire protection</li>
+                <li>Fire system assessment &amp; readiness</li>
+                <li>Operational risk reduction</li>
+                <li>Facility fire safety guidance</li>
+              </ul>
             </article>
           </div>
         </div>
