@@ -77,14 +77,14 @@ export function AboutPage() {
                   decoding="async"
                 />
               </div>
-              <p className="leader-exp">Founder</p>
+              <p className="leader-exp">30+ years</p>
               <h3>Rajamuthupandy Subramanian</h3>
               <p className="leader-role">
                 Founder &amp; CEO · Chartered Engineer · Competent Person · Third Party
                 Inspection Specialist
               </p>
               <p className="leader-bio">
-                With extensive experience in mechanical engineering, statutory
+                With 30+ years of experience in mechanical engineering, statutory
                 inspections and industrial safety, he supports manufacturing industries,
                 infrastructure projects, MSMEs, financial institutions and EPC
                 contractors in achieving engineering compliance, operational safety and
