@@ -137,6 +137,7 @@ export function AboutPage() {
                 <li>Fire extinguishers</li>
                 <li>Fire hydrant system</li>
                 <li>Smoke detectors</li>
+                <li>Fire alarms</li>
                 <li>Industrial plant fire safety</li>
                 <li>Large building fire protection</li>
                 <li>Fire system assessment &amp; readiness</li>
