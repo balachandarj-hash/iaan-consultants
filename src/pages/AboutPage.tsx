@@ -59,30 +59,55 @@ export function AboutPage() {
         <div className="container">
           <div className="section-intro" data-reveal>
             <p className="eyebrow">Leadership</p>
-            <h2 className="section-title">Founder &amp; Chief Executive Officer</h2>
+            <h2 className="section-title">Leadership team</h2>
+            <p className="section-lead">
+              Experienced leaders guiding our inspection, solar and fire safety practice
+              across Indian industry.
+            </p>
           </div>
-          <div className="leader-block" data-reveal>
-            <div>
+          <div className="leadership-grid" data-reveal>
+            <article className="leader-card">
+              <p className="leader-exp">Founder</p>
               <h3>Rajamuthupandy Subramanian</h3>
               <p className="leader-role">
                 Founder &amp; CEO · Chartered Engineer · Competent Person · Third Party
                 Inspection Specialist
               </p>
-              <p className="prose">
+              <p className="leader-bio">
                 With extensive experience in mechanical engineering, statutory
                 inspections and industrial safety, he supports manufacturing industries,
                 infrastructure projects, MSMEs, financial institutions and EPC
                 contractors in achieving engineering compliance, operational safety and
                 technical excellence.
               </p>
-            </div>
-            <ul className="check-list">
-              <li>Chartered Engineering services</li>
-              <li>Competent Person certification</li>
-              <li>Plant &amp; machinery valuation</li>
-              <li>Building stability certification</li>
-              <li>Industrial safety &amp; compliance audits</li>
-            </ul>
+              <ul className="check-list leader-card-list">
+                <li>Chartered Engineering services</li>
+                <li>Competent Person certification</li>
+                <li>Plant &amp; machinery valuation</li>
+                <li>Building stability certification</li>
+                <li>Industrial safety &amp; compliance audits</li>
+              </ul>
+            </article>
+            <article className="leader-card">
+              <p className="leader-exp">22+ years</p>
+              <h3>Balachandar J</h3>
+              <p className="leader-role">
+                Head of Solar Division and Marketing
+              </p>
+              <p className="leader-bio">
+                Leads IAAN&apos;s solar division and marketing with 22+ years of
+                experience supporting client engagement and solar project delivery.
+              </p>
+            </article>
+            <article className="leader-card">
+              <p className="leader-exp">17+ years</p>
+              <h3>Govindarajan</h3>
+              <p className="leader-role">Head of Fire Safety</p>
+              <p className="leader-bio">
+                Heads the firm&apos;s fire safety practice with 17+ years of experience
+                in industrial and building fire safety.
+              </p>
+            </article>
           </div>
         </div>
       </section>

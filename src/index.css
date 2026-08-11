@@ -1682,6 +1682,67 @@ em {
   letter-spacing: 0.02em;
 }
 
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.leader-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.85rem 1.5rem 1.75rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--navy-800);
+}
+
+.leader-card:first-child {
+  border-top-color: var(--gold-500);
+}
+
+.leader-exp {
+  margin-bottom: 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--navy-700);
+}
+
+.leader-card h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.2vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy-900);
+}
+
+.leader-card .leader-role {
+  margin-top: 0.55rem;
+  line-height: 1.45;
+}
+
+.leader-bio {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.leader-card-list {
+  margin-top: 1.35rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.leader-card-list li {
+  font-size: 0.92rem;
+}
+
 @media (max-width: 960px) {
   .service-grid,
   .detail-split,
@@ -1691,7 +1752,8 @@ em {
   .related-grid,
   .contact-page-grid,
   .about-story-grid,
-  .leader-block {
+  .leader-block,
+  .leadership-grid {
     grid-template-columns: 1fr;
   }
 
