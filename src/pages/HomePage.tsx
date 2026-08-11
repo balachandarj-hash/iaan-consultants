@@ -212,9 +212,9 @@ export function HomePage() {
           </div>
           <div className="clients-strip">
             {clients.map((client) => (
-              <span key={client} className="client-chip">
-                {client}
-              </span>
+              <div key={client.name} className="client-logo" title={client.name}>
+                <img src={client.logo} alt={client.name} loading="lazy" />
+              </div>
             ))}
           </div>
         </div>

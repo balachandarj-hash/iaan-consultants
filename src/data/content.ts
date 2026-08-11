@@ -1,11 +1,31 @@
 export const asset = (file: string) => `${import.meta.env.BASE_URL}images/${file}`
 
-export const clients = [
-  'Sendhamarai Engineering',
-  'Venkateshwara Fibre Glass',
-  'IL&FS Tamil Nadu Power',
-  'Hindustan Coca-Cola',
-  'Aachi Masala Foods',
+export type Client = {
+  name: string
+  logo: string
+}
+
+export const clients: Client[] = [
+  {
+    name: 'Sendhamarai Engineering',
+    logo: asset('clients/sendhamarai-engineering.png'),
+  },
+  {
+    name: 'Venkateshwara Fibre Glass',
+    logo: asset('clients/venkateshwara-fibre-glass.png'),
+  },
+  {
+    name: 'IL&FS Tamil Nadu Power',
+    logo: asset('clients/ilfs-tamil-nadu-power.png'),
+  },
+  {
+    name: 'Hindustan Coca-Cola',
+    logo: asset('clients/hindustan-coca-cola.png'),
+  },
+  {
+    name: 'Aachi Group of Companies',
+    logo: asset('clients/aachi-group.png'),
+  },
 ]
 
 export const capabilities = [
