@@ -55,10 +55,6 @@ export function HomePage() {
                 alt="IAAN CONSULTANTSS"
               />
             </p>
-            <p className="hero-slide-label" aria-live="polite">
-              <span className="hero-slide-index">{slide.index}</span>
-              {slide.title}
-            </p>
             <h1 className="hero-headline" key={`title-${slide.id}`}>
               {slide.heroTitle}
             </h1>
@@ -73,7 +69,30 @@ export function HomePage() {
                 Speak with us
               </Link>
             </div>
+          </div>
 
+          <div className="hero-slider" data-reveal>
+            <p className="hero-slide-label" aria-live="polite">
+              <span className="hero-slide-index">{slide.index}</span>
+              {slide.title}
+            </p>
+            <div className="hero-aside">
+              <div className="hero-slides" aria-live="polite" aria-atomic="true">
+                {verticals.map((item, index) => (
+                  <figure
+                    key={item.id}
+                    className={`hero-slide${index === active ? ' is-active' : ''}`}
+                    aria-hidden={index !== active}
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.imageAlt}
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                    />
+                  </figure>
+                ))}
+              </div>
+            </div>
             <div
               className="hero-dots"
               role="tablist"
@@ -89,24 +108,6 @@ export function HomePage() {
                   aria-label={`Show ${item.title}`}
                   onClick={() => goTo(index)}
                 />
-              ))}
-            </div>
-          </div>
-
-          <div className="hero-aside hero-slider" data-reveal>
-            <div className="hero-slides" aria-live="polite" aria-atomic="true">
-              {verticals.map((item, index) => (
-                <figure
-                  key={item.id}
-                  className={`hero-slide${index === active ? ' is-active' : ''}`}
-                  aria-hidden={index !== active}
-                >
-                  <img
-                    src={item.image}
-                    alt={item.imageAlt}
-                    loading={index === 0 ? 'eager' : 'lazy'}
-                  />
-                </figure>
               ))}
             </div>
           </div>
