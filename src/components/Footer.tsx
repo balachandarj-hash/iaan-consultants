@@ -10,7 +10,7 @@ export function Footer() {
             <img className="footer-logo" src={asset('logo.png')} alt="IAAN CONSULTANTSS" />
           </Link>
           <p className="footer-tagline">
-            Industrial inspection &amp; engineering consultancy · Chennai, Tamil Nadu
+            Industrial Inspection &amp; Engineering Consultancy · Chennai, Tamil Nadu
           </p>
         </div>
         <div>
