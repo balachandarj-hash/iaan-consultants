@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { PageHero } from '../components/PageHero'
+import { LocationWithIndia } from '../components/IndiaFlag'
 import { asset, capabilities, clients, verticals } from '../data/content'
 
 export function AboutPage() {
@@ -49,7 +50,9 @@ export function AboutPage() {
             </div>
             <div>
               <strong>Chennai</strong>
-              <span>Headquarters, Tamil Nadu</span>
+              <span>
+                <LocationWithIndia>Headquarters, Tamil Nadu</LocationWithIndia>
+              </span>
             </div>
           </aside>
         </div>
@@ -131,6 +134,9 @@ export function AboutPage() {
                 systems that protect people, assets and operations.
               </p>
               <ul className="check-list leader-card-list">
+                <li>Fire extinguishers</li>
+                <li>Fire hydrant system</li>
+                <li>Smoke detectors</li>
                 <li>Industrial plant fire safety</li>
                 <li>Large building fire protection</li>
                 <li>Fire system assessment &amp; readiness</li>

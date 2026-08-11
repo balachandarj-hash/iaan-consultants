@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { LocationWithIndia } from '../components/IndiaFlag'
 import { asset, clients, verticals } from '../data/content'
 
 const SLIDE_MS = 3000
@@ -118,7 +119,9 @@ export function HomePage() {
         <div className="container trust-grid">
           <div>
             <strong>2014</strong>
-            <span>Established in Chennai</span>
+            <span>
+              <LocationWithIndia>Established in Chennai</LocationWithIndia>
+            </span>
           </div>
           <div>
             <strong>100+</strong>

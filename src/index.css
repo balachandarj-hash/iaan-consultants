@@ -219,6 +219,31 @@ em {
   padding: 0.55rem 0;
 }
 
+.location-with-india {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.india-flag {
+  display: block;
+  flex-shrink: 0;
+  width: 16px;
+  height: 12px;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px rgba(10, 25, 48, 0.14);
+}
+
+.topbar .india-flag {
+  width: 14px;
+  height: 10px;
+}
+
+.stat-panel .location-with-india,
+.trust-grid .location-with-india {
+  display: inline-flex;
+}
+
 /* Header */
 .site-header {
   position: sticky;

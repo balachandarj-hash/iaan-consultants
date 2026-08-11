@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { LocationWithIndia } from './IndiaFlag'
 import { asset, verticals } from '../data/content'
 
 export function Header() {
@@ -30,7 +31,7 @@ export function Header() {
     <>
       <div className="topbar">
         <div className="container topbar-inner">
-          <span>Chennai, Tamil Nadu · Est. 2014</span>
+          <LocationWithIndia>Chennai, Tamil Nadu · Est. 2014</LocationWithIndia>
           <span>Competent Person · DISH Approved 2024–2027</span>
         </div>
       </div>

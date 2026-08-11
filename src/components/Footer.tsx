@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { LocationWithIndia } from './IndiaFlag'
 import { asset, verticals } from '../data/content'
 
 export function Footer() {
@@ -10,7 +11,8 @@ export function Footer() {
             <img className="footer-logo" src={asset('logo.png')} alt="IAAN CONSULTANTSS" />
           </Link>
           <p className="footer-tagline">
-            Industrial Inspection &amp; Engineering Consultancy · Chennai, Tamil Nadu
+            Industrial Inspection &amp; Engineering Consultancy ·{' '}
+            <LocationWithIndia>Chennai, Tamil Nadu</LocationWithIndia>
           </p>
         </div>
         <div>

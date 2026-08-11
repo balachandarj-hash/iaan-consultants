@@ -1,5 +1,6 @@
 import { PageHero } from '../components/PageHero'
 import { ContactForm } from '../components/ContactForm'
+import { LocationWithIndia } from '../components/IndiaFlag'
 import { asset, verticals } from '../data/content'
 import { Link } from 'react-router-dom'
 
@@ -32,7 +33,7 @@ export function ContactPage() {
             <ul className="contact-points spaced">
               <li>
                 <strong>Headquarters</strong>
-                <span>Chennai, Tamil Nadu, India</span>
+                <LocationWithIndia>Chennai, Tamil Nadu, India</LocationWithIndia>
               </li>
               <li>
                 <strong>Leadership</strong>
