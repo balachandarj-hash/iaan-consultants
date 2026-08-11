@@ -103,7 +103,7 @@ export function HomePage() {
               From statutory inspections to fire safety and ISO programmes, we help
               Indian manufacturing stay safe, compliant and productive.
             </p>
-            <Link to="/about" className="text-link light">
+            <Link to="/about" className="text-link">
               About the firm <span aria-hidden="true">→</span>
             </Link>
           </div>
