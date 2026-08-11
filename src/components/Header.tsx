@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { verticals } from '../data/content'
+import { asset, verticals } from '../data/content'
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -37,9 +37,8 @@ export function Header() {
 
       <header className={`site-header${scrolled ? ' scrolled' : ''}`}>
         <div className="container header-inner">
-          <Link to="/" className="logo" onClick={close}>
-            <span className="logo-mark">IAAN</span>
-            <span className="logo-word">CONSULTANTSS</span>
+          <Link to="/" className="logo" onClick={close} aria-label="IAAN CONSULTANTSS home">
+            <img className="logo-img" src={asset('logo.png')} alt="IAAN CONSULTANTSS" />
           </Link>
 
           <button

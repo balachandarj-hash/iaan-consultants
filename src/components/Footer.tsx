@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom'
-import { verticals } from '../data/content'
+import { asset, verticals } from '../data/content'
 
 export function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
-          <p className="footer-brand">
-            IAAN <em>CONSULTANTSS</em>
-          </p>
+          <Link to="/" className="footer-brand" aria-label="IAAN CONSULTANTSS home">
+            <img className="footer-logo" src={asset('logo.png')} alt="IAAN CONSULTANTSS" />
+          </Link>
           <p className="footer-tagline">
             Industrial inspection &amp; engineering consultancy · Chennai, Tamil Nadu
           </p>

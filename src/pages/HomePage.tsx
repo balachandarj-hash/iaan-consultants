@@ -10,13 +10,17 @@ export function HomePage() {
         </div>
         <div className="hero-shade" aria-hidden="true" />
         <div className="container hero-content">
-          <div className="hero-copy-block">
-            <p className="brand-lockup">
-              IAAN <em>CONSULTANTSS</em>
-            </p>
-            <h1 className="hero-headline">
-              Industrial assurance for Indian plants and large buildings.
-            </h1>
+            <div className="hero-copy-block">
+              <p className="brand-lockup">
+                <img
+                  className="brand-lockup-img"
+                  src={asset('logo.png')}
+                  alt="IAAN CONSULTANTSS"
+                />
+              </p>
+              <h1 className="hero-headline">
+                Industrial assurance for Indian plants and large buildings.
+              </h1>
             <p className="hero-copy">
               Chennai-based consultancy for solar plant installation, industrial fire
               safety, statutory compliance and ISO audit &amp; certification.
