@@ -81,12 +81,12 @@ em {
 }
 
 .section {
-  padding: clamp(5rem, 10vw, 8rem) 0;
+  padding: clamp(3.25rem, 6.5vw, 5.25rem) 0;
 }
 
 .section-intro {
   max-width: 40rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.25rem;
 }
 
 .section-intro.center {
@@ -123,7 +123,7 @@ em {
 }
 
 .section-lead {
-  margin-top: 1.15rem;
+  margin-top: 0.85rem;
   max-width: 38rem;
   color: var(--muted);
   font-size: 1.05rem;
@@ -189,7 +189,7 @@ em {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  margin-top: 1.75rem;
+  margin-top: 1.25rem;
   font-size: 0.88rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -384,7 +384,7 @@ em {
 /* Hero */
 .hero {
   position: relative;
-  min-height: calc(100svh - 6rem);
+  min-height: calc(78svh - 5.5rem);
   display: grid;
   align-items: center;
   color: var(--white);
@@ -422,9 +422,9 @@ em {
 .hero-light .hero-content {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
   align-items: center;
-  padding: 5.5rem 0 4.5rem;
+  padding: 3.75rem 0 3rem;
 }
 
 .hero-light .hero-headline {
@@ -445,7 +445,7 @@ em {
 
 .hero-aside {
   position: relative;
-  min-height: 420px;
+  min-height: 340px;
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--white);
@@ -554,11 +554,11 @@ em {
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 7rem 0 5.5rem;
+  padding: 4.75rem 0 3.75rem;
 }
 
 .brand-lockup {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   display: inline-flex;
   padding: 0;
   background: transparent;
@@ -573,7 +573,7 @@ em {
 }
 
 .hero-headline {
-  margin-top: 1.15rem;
+  margin-top: 0.85rem;
   max-width: 20ch;
   font-family: var(--font-display);
   font-size: clamp(1.55rem, 3vw, 2.15rem);
@@ -595,7 +595,7 @@ em {
   display: flex;
   flex-wrap: wrap;
   gap: 0.85rem;
-  margin-top: 2.25rem;
+  margin-top: 1.5rem;
 }
 
 .hero-copy-block {
@@ -633,8 +633,8 @@ em {
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  padding: 2rem 0;
+  gap: 1.25rem;
+  padding: 1.35rem 0;
 }
 
 .trust-grid strong {
@@ -658,13 +658,13 @@ em {
 
 /* Vertical bands */
 .verticals-intro {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 .vertical-band {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  min-height: 560px;
+  min-height: 420px;
   background: var(--white);
 }
 
@@ -682,7 +682,7 @@ em {
 
 .vertical-band-media {
   position: relative;
-  min-height: 420px;
+  min-height: 320px;
   overflow: hidden;
   background: var(--navy-900);
 }
@@ -702,7 +702,7 @@ em {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(2.5rem, 6vw, 4.5rem);
+  padding: clamp(1.75rem, 4vw, 3rem);
 }
 
 .vertical-band-copy h2 {
@@ -724,9 +724,9 @@ em {
 }
 
 .service-list {
-  margin: 1.5rem 0 2rem;
+  margin: 1.15rem 0 1.5rem;
   display: grid;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .service-list li {
@@ -766,7 +766,7 @@ em {
 .expertise-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
   align-items: end;
 }
 
@@ -777,7 +777,7 @@ em {
 }
 
 .step {
-  padding-top: 1.25rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--line);
 }
 
@@ -811,7 +811,7 @@ em {
 .about-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
   align-items: start;
 }
 
@@ -834,7 +834,7 @@ em {
 .about-panel {
   background: var(--white);
   border: 1px solid var(--line);
-  padding: 2rem 1.75rem;
+  padding: 1.5rem 1.35rem;
 }
 
 .about-panel h3 {
@@ -875,7 +875,28 @@ em {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 1rem 1.25rem;
+}
+
+.client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 11.5rem);
+  height: 5.25rem;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.client-logo img {
+  max-width: 100%;
+  max-height: 3.4rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: none;
 }
 
 .client-chip {
@@ -892,7 +913,7 @@ em {
 .cta-band {
   background: var(--white);
   color: var(--navy-900);
-  padding: clamp(3.5rem, 7vw, 5rem) 0;
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -901,8 +922,8 @@ em {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  padding: 2rem 2.25rem;
+  gap: 1.5rem;
+  padding: 1.5rem 1.75rem;
   background: var(--surface);
   border: 1px solid var(--line);
 }
@@ -926,14 +947,14 @@ em {
 .contact-grid {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
   align-items: start;
 }
 
 .contact-points {
-  margin-top: 2.25rem;
+  margin-top: 1.5rem;
   display: grid;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .contact-points strong {
@@ -952,8 +973,8 @@ em {
 
 .contact-form {
   display: grid;
-  gap: 1rem;
-  padding: 2rem;
+  gap: 0.85rem;
+  padding: 1.5rem;
   background: var(--surface);
   border: 1px solid var(--line);
 }
@@ -1018,15 +1039,15 @@ em {
 .site-footer {
   background: var(--surface);
   color: var(--muted);
-  padding-top: 4rem;
+  padding-top: 2.75rem;
   border-top: 1px solid var(--line);
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr repeat(3, 1fr);
-  gap: 2rem;
-  padding-bottom: 3rem;
+  gap: 1.75rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--line);
 }
 
@@ -1073,7 +1094,7 @@ em {
 }
 
 .footer-bottom {
-  padding: 1.35rem 0;
+  padding: 1.1rem 0;
   font-size: 0.82rem;
   color: var(--muted);
 }
@@ -1131,7 +1152,7 @@ em {
   }
 
   .vertical-band-copy {
-    padding: 2rem 1.5rem 2.75rem;
+    padding: 1.5rem 1.25rem 2rem;
   }
 }
 
@@ -1205,11 +1226,11 @@ em {
 
   .hero-light .hero-content {
     grid-template-columns: 1fr;
-    padding: 4.5rem 0 3.5rem;
+    padding: 3.25rem 0 2.5rem;
   }
 
   .hero-aside {
-    min-height: 240px;
+    min-height: 220px;
     aspect-ratio: 16 / 10;
   }
 
@@ -1218,7 +1239,7 @@ em {
   }
 
   .hero-content {
-    padding: 6rem 0 4rem;
+    padding: 4rem 0 3rem;
   }
 
   .hero-headline {
@@ -1247,7 +1268,7 @@ em {
 /* Page hero */
 .page-hero {
   position: relative;
-  min-height: 58vh;
+  min-height: 42vh;
   display: grid;
   align-items: end;
   color: var(--white);
@@ -1275,7 +1296,7 @@ em {
 .page-hero-content {
   position: relative;
   z-index: 1;
-  padding: 8rem 0 3.5rem;
+  padding: 5.5rem 0 2.5rem;
 }
 
 .page-hero h1 {
@@ -1304,7 +1325,7 @@ em {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9rem;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -1330,7 +1351,7 @@ em {
 
 .service-tile {
   display: grid;
-  grid-template-rows: 220px 1fr;
+  grid-template-rows: 200px 1fr;
   background: var(--white);
   border: 1px solid var(--line);
   overflow: hidden;
@@ -1348,7 +1369,7 @@ em {
 }
 
 .service-tile-body {
-  padding: 1.5rem 1.4rem 1.6rem;
+  padding: 1.25rem 1.25rem 1.35rem;
 }
 
 .service-tile-index {
@@ -1388,12 +1409,12 @@ em {
 .detail-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
   align-items: center;
 }
 
 .detail-photo {
-  min-height: 420px;
+  min-height: 340px;
   overflow: hidden;
   background: var(--navy-900);
 }
@@ -1420,7 +1441,7 @@ em {
 }
 
 .detail-split .btn {
-  margin-top: 1.75rem;
+  margin-top: 1.25rem;
   align-self: start;
   width: fit-content;
 }
@@ -1432,7 +1453,7 @@ em {
 }
 
 .info-card {
-  padding: 1.6rem 1.4rem;
+  padding: 1.25rem 1.2rem;
   background: var(--white);
   border: 1px solid var(--line);
 }
@@ -1454,7 +1475,7 @@ em {
 .process-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
   align-items: start;
 }
 
@@ -1464,7 +1485,7 @@ em {
 }
 
 .process-step {
-  padding: 1.35rem 1.25rem;
+  padding: 1.1rem 1.1rem;
   border-top: 1px solid var(--line);
 }
 
@@ -1492,11 +1513,11 @@ em {
 .dual-lists {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
 }
 
 .mini-title {
-  margin: 0.35rem 0 1.25rem;
+  margin: 0.25rem 0 1rem;
   font-family: var(--font-display);
   font-size: clamp(1.7rem, 3vw, 2.2rem);
   font-weight: 600;
@@ -1566,7 +1587,7 @@ em {
 }
 
 .related-card div {
-  padding: 1.15rem 1.1rem 1.3rem;
+  padding: 1rem 1rem 1.15rem;
 }
 
 .related-card h3 {
@@ -1590,16 +1611,16 @@ em {
 .contact-page-grid {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
   align-items: start;
 }
 
 .contact-points.spaced {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .quick-links {
-  margin-top: 2.5rem;
+  margin-top: 1.75rem;
 }
 
 .quick-link-row {
@@ -1626,7 +1647,7 @@ em {
 .about-story-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(2rem, 5vw, 4rem);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
   align-items: start;
 }
 
@@ -1639,7 +1660,7 @@ em {
 }
 
 .stat-panel > div {
-  padding: 1.4rem 1.2rem;
+  padding: 1.15rem 1.05rem;
   background: var(--white);
 }
 
@@ -1662,8 +1683,8 @@ em {
 .leader-block {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: clamp(2rem, 5vw, 3.5rem);
-  padding: 2rem;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  padding: 1.5rem;
   background: var(--white);
   border: 1px solid var(--line);
 }
@@ -1692,7 +1713,7 @@ em {
 .leader-card {
   display: flex;
   flex-direction: column;
-  padding: 1.85rem 1.5rem 1.75rem;
+  padding: 1.4rem 1.25rem 1.35rem;
   background: var(--white);
   border: 1px solid var(--line);
   border-top: 3px solid var(--navy-800);
@@ -1703,7 +1724,7 @@ em {
 }
 
 .leader-photo {
-  margin: -0.35rem 0 1.25rem;
+  margin: -0.25rem 0 1rem;
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--surface);
@@ -1740,7 +1761,7 @@ em {
 }
 
 .leader-bio {
-  margin-top: 1rem;
+  margin-top: 0.85rem;
   color: var(--muted);
   font-size: 0.98rem;
   font-weight: 500;
@@ -1749,8 +1770,8 @@ em {
 }
 
 .leader-card-list {
-  margin-top: 1.35rem;
-  padding-top: 1.25rem;
+  margin-top: 1.1rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--line);
 }
 
