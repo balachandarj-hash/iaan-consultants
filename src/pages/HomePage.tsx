@@ -142,7 +142,7 @@ export function HomePage() {
         <div className="container">
           <div className="section-intro" data-reveal>
             <p className="eyebrow">Our services</p>
-            <h2 className="section-title">Four practices. One engineering standard.</h2>
+            <h2 className="section-title">Four practices. One Engineering standard.</h2>
             <p className="section-lead">
               Dedicated service lines for Indian factories, warehouses, process plants
               and large commercial buildings.
@@ -201,7 +201,7 @@ export function HomePage() {
             <div className="step">
               <span>03</span>
               <h3>Advise</h3>
-              <p>Practical engineering guidance that strengthens operations and compliance.</p>
+              <p>Practical Engineering guidance that strengthens operations and compliance.</p>
             </div>
           </div>
         </div>

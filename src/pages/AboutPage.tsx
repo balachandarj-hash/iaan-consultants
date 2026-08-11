@@ -9,9 +9,9 @@ export function AboutPage() {
       <PageHero
         eyebrow="About Us"
         title="Technical depth and ethical practice for Indian industry"
-        lead="IAAN CONSULTANTSS is a Chennai-based industrial inspection and engineering consultancy established in 2014 by Rajamuthupandy Subramanian."
+        lead="IAAN CONSULTANTSS is a Chennai-based industrial inspection and Engineering consultancy established in 2014 by Rajamuthupandy Subramanian."
         image={asset('about-hero.jpg')}
-        imageAlt="Indian engineering consultants in a professional meeting"
+        imageAlt="Indian Engineering consultants in a professional meeting"
         crumbs={[
           { label: 'Home', to: '/' },
           { label: 'About Us' },
@@ -64,7 +64,7 @@ export function AboutPage() {
             <p className="eyebrow">Our strengths</p>
             <h2 className="section-title">Four business verticals</h2>
             <p className="section-lead">
-              Dedicated engineering strengths for Indian factories, warehouses, process
+              Dedicated Engineering strengths for Indian factories, warehouses, process
               plants and large commercial buildings.
             </p>
           </div>
@@ -122,10 +122,10 @@ export function AboutPage() {
                 Inspection Specialist
               </p>
               <p className="leader-bio">
-                With 30+ years of experience in mechanical engineering, statutory
+                With 30+ years of experience in mechanical Engineering, statutory
                 inspections and industrial safety, he supports manufacturing industries,
                 infrastructure projects, MSMEs, financial institutions and EPC
-                contractors in achieving engineering compliance, operational safety and
+                contractors in achieving Engineering compliance, operational safety and
                 technical excellence.
               </p>
               <ul className="check-list leader-card-list">
@@ -153,7 +153,7 @@ export function AboutPage() {
                 <li>Solar plant installation oversight</li>
                 <li>Renewable energy project delivery</li>
                 <li>Client engagement &amp; business development</li>
-                <li>Marketing strategy for engineering services</li>
+                <li>Marketing strategy for Engineering services</li>
                 <li>Commercial &amp; industrial solar solutions</li>
               </ul>
             </article>
@@ -187,7 +187,7 @@ export function AboutPage() {
       <section className="section">
         <div className="container" data-reveal>
           <p className="eyebrow">Capabilities</p>
-          <h2 className="mini-title">Core engineering strengths</h2>
+          <h2 className="mini-title">Core Engineering strengths</h2>
           <ul className="check-list about-capabilities">
             {capabilities.map((item) => (
               <li key={item}>{item}</li>
@@ -216,7 +216,7 @@ export function AboutPage() {
         <div className="container cta-inner" data-reveal>
           <div>
             <p className="eyebrow">Work with IAAN</p>
-            <h2>Partner with a Chennai engineering practice built for industry.</h2>
+            <h2>Partner with a Chennai Engineering practice built for industry.</h2>
           </div>
           <Link className="btn btn-primary" to="/contact">
             Contact us
