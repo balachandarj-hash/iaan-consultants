@@ -185,8 +185,8 @@ export const verticals: Vertical[] = [
       'Competent Person inspections, building stability certification, equipment fitness and plant & machinery valuation under one engineering practice.',
     image: asset('compliance.jpg'),
     detailImage: asset('compliance-detail.jpg'),
-    imageAlt: 'Indian engineer inspecting machinery inside a manufacturing plant',
-    detailAlt: 'Chartered Engineer inspecting industrial equipment in an Indian factory',
+    imageAlt: 'Industrial workers in hard hats and high-vis vests on a plant platform',
+    detailAlt: 'Two industrial workers in hard hats and high-vis vests on a compliance inspection platform',
     overview: [
       'Factory compliance in Tamil Nadu demands both statutory competence and practical plant knowledge. Delays in certificates and inspections can stall operations, financing and expansions.',
       'IAAN CONSULTANTSS provides a single window for Competent Person inspections, Chartered Engineering certifications and related industrial compliance support.',
