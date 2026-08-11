@@ -467,7 +467,7 @@ em {
   inset: 0;
   margin: 0;
   opacity: 0;
-  transition: opacity 0.85s ease;
+  transition: opacity 0.6s ease;
   pointer-events: none;
 }
 
@@ -482,7 +482,7 @@ em {
   height: 100%;
   object-fit: cover;
   transform: scale(1.03);
-  transition: transform 5.2s ease-out;
+  transition: transform 3.2s ease-out;
 }
 
 .hero-slide.is-active img {
@@ -508,7 +508,7 @@ em {
 
 .hero-light .hero-headline,
 .hero-light .hero-copy {
-  animation: hero-copy-fade 0.55s ease both;
+  animation: hero-copy-fade 0.4s ease both;
 }
 
 .hero-dots {

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { asset, clients, verticals } from '../data/content'
 
-const SLIDE_MS = 5000
+const SLIDE_MS = 3000
 
 export function HomePage() {
   const [active, setActive] = useState(0)
