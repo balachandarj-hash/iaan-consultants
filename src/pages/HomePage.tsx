@@ -4,23 +4,19 @@ import { asset, clients, verticals } from '../data/content'
 export function HomePage() {
   return (
     <>
-      <section className="hero">
-        <div className="hero-media" aria-hidden="true">
-          <img src={asset('hero.jpg')} alt="" />
-        </div>
-        <div className="hero-shade" aria-hidden="true" />
+      <section className="hero hero-light">
         <div className="container hero-content">
-            <div className="hero-copy-block">
-              <p className="brand-lockup">
-                <img
-                  className="brand-lockup-img"
-                  src={asset('logo.png')}
-                  alt="IAAN CONSULTANTSS"
-                />
-              </p>
-              <h1 className="hero-headline">
-                Industrial assurance for Indian plants and large buildings.
-              </h1>
+          <div className="hero-copy-block">
+            <p className="brand-lockup">
+              <img
+                className="brand-lockup-img"
+                src={asset('logo.png')}
+                alt="IAAN CONSULTANTSS"
+              />
+            </p>
+            <h1 className="hero-headline">
+              Industrial assurance for Indian plants and large buildings.
+            </h1>
             <p className="hero-copy">
               Chennai-based consultancy for solar plant installation, industrial fire
               safety, statutory compliance and ISO audit &amp; certification.
@@ -29,10 +25,13 @@ export function HomePage() {
               <Link className="btn btn-primary" to="/services/fire-safety">
                 Explore services
               </Link>
-              <Link className="btn btn-ghost" to="/contact">
+              <Link className="btn btn-outline" to="/contact">
                 Speak with us
               </Link>
             </div>
+          </div>
+          <div className="hero-aside" data-reveal>
+            <img src={asset('solar.jpg')} alt="Industrial rooftop solar installation in India" />
           </div>
         </div>
       </section>

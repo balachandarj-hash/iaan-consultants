@@ -172,6 +172,17 @@ em {
   background: rgba(255, 255, 255, 0.06);
 }
 
+.btn-outline {
+  border: 1px solid var(--navy-700);
+  color: var(--navy-700);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--navy-700);
+  color: var(--white);
+}
+
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -232,9 +243,6 @@ em {
 .logo {
   display: inline-flex;
   align-items: center;
-  padding: 0.35rem 0.5rem;
-  background: #000000;
-  border: 1px solid rgba(32, 65, 111, 0.25);
 }
 
 .logo-img {
@@ -374,9 +382,9 @@ em {
 /* Hero */
 .hero {
   position: relative;
-  min-height: calc(100svh - 2.2rem);
+  min-height: calc(100svh - 6rem);
   display: grid;
-  align-items: end;
+  align-items: center;
   color: var(--white);
   overflow: hidden;
 }
@@ -400,6 +408,45 @@ em {
     linear-gradient(180deg, rgba(5, 13, 24, 0.35) 0%, rgba(5, 13, 24, 0.78) 100%);
 }
 
+.hero-light {
+  color: var(--navy-900);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(154, 58, 61, 0.08), transparent 28%),
+    radial-gradient(circle at 10% 80%, rgba(32, 65, 111, 0.1), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, var(--surface) 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-light .hero-content {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  padding: 5.5rem 0 4.5rem;
+}
+
+.hero-light .hero-headline {
+  color: var(--navy-900);
+}
+
+.hero-light .hero-copy {
+  color: var(--muted);
+}
+
+.hero-aside {
+  position: relative;
+  min-height: 380px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.hero-aside img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .hero-content {
   position: relative;
   z-index: 1;
@@ -409,10 +456,10 @@ em {
 .brand-lockup {
   margin-bottom: 1.25rem;
   display: inline-flex;
-  padding: 0.75rem 1rem;
-  background: #000000;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .brand-lockup-img {
@@ -422,7 +469,7 @@ em {
 }
 
 .hero-headline {
-  margin-top: 1.5rem;
+  margin-top: 1.15rem;
   max-width: 20ch;
   font-family: var(--font-display);
   font-size: clamp(1.55rem, 3vw, 2.15rem);
@@ -880,9 +927,6 @@ em {
 .footer-brand {
   display: inline-flex;
   margin-bottom: 0.85rem;
-  padding: 0.4rem 0.55rem;
-  background: #000000;
-  border: 1px solid rgba(32, 65, 111, 0.25);
 }
 
 .footer-logo {
@@ -1040,6 +1084,16 @@ em {
 
   .cta-inner {
     display: grid;
+  }
+
+  .hero-light .hero-content {
+    grid-template-columns: 1fr;
+    padding: 4.5rem 0 3.5rem;
+  }
+
+  .hero-aside {
+    min-height: 240px;
+    aspect-ratio: 16 / 10;
   }
 
   .hero-content {
