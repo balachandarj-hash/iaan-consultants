@@ -66,7 +66,17 @@ export function AboutPage() {
             </p>
           </div>
           <div className="leadership-grid" data-reveal>
-            <article className="leader-card">
+            <article className="leader-card leader-card--ceo">
+              <div className="leader-photo">
+                <img
+                  src={asset('ceo-rajamuthupandy.jpg')}
+                  alt="Rajamuthupandy Subramanian, Founder and CEO of IAAN CONSULTANTSS"
+                  width={640}
+                  height={640}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
               <p className="leader-exp">Founder</p>
               <h3>Rajamuthupandy Subramanian</h3>
               <p className="leader-role">
