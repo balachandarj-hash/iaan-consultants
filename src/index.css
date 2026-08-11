@@ -435,7 +435,7 @@ em {
 
 .hero-aside {
   position: relative;
-  min-height: 380px;
+  min-height: 420px;
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--white);
@@ -445,6 +445,104 @@ em {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hero-slider {
+  isolation: isolate;
+}
+
+.hero-slides {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.85s ease;
+  pointer-events: none;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+  transition: transform 5.2s ease-out;
+}
+
+.hero-slide.is-active img {
+  transform: scale(1);
+}
+
+.hero-slide-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+}
+
+.hero-slide-index {
+  color: var(--navy-700);
+  letter-spacing: 0.12em;
+}
+
+.hero-light .hero-headline,
+.hero-light .hero-copy {
+  animation: hero-copy-fade 0.55s ease both;
+}
+
+.hero-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 2rem;
+}
+
+.hero-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: rgba(32, 65, 111, 0.22);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.hero-dot:hover {
+  background: rgba(32, 65, 111, 0.45);
+}
+
+.hero-dot.is-active {
+  background: var(--gold-500);
+  transform: scale(1.2);
+}
+
+.hero-dot:focus-visible {
+  outline: 2px solid var(--navy-700);
+  outline-offset: 3px;
+}
+
+@keyframes hero-copy-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-content {
@@ -989,11 +1087,22 @@ em {
   [data-reveal],
   .hero-copy-block,
   .hero-media img,
-  .vertical-band-media img {
+  .vertical-band-media img,
+  .hero-light .hero-headline,
+  .hero-light .hero-copy,
+  .hero-slide,
+  .hero-slide img {
     animation: none !important;
     transition: none !important;
-    opacity: 1 !important;
     transform: none !important;
+  }
+
+  .hero-slide {
+    opacity: 0 !important;
+  }
+
+  .hero-slide.is-active {
+    opacity: 1 !important;
   }
 }
 
@@ -1094,6 +1203,10 @@ em {
   .hero-aside {
     min-height: 240px;
     aspect-ratio: 16 / 10;
+  }
+
+  .hero-slides {
+    position: absolute;
   }
 
   .hero-content {

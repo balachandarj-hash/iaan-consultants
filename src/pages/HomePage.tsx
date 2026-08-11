@@ -1,10 +1,51 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { asset, clients, verticals } from '../data/content'
 
+const SLIDE_MS = 5000
+
 export function HomePage() {
+  const [active, setActive] = useState(0)
+  const [paused, setPaused] = useState(false)
+  const [reduceMotion, setReduceMotion] = useState(false)
+
+  const slide = verticals[active]
+
+  useEffect(() => {
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const sync = () => setReduceMotion(media.matches)
+    sync()
+    media.addEventListener('change', sync)
+    return () => media.removeEventListener('change', sync)
+  }, [])
+
+  useEffect(() => {
+    if (reduceMotion || paused) return
+    const id = window.setInterval(() => {
+      setActive((i) => (i + 1) % verticals.length)
+    }, SLIDE_MS)
+    return () => window.clearInterval(id)
+  }, [reduceMotion, paused])
+
+  const goTo = (index: number) => {
+    setActive(index)
+  }
+
   return (
     <>
-      <section className="hero hero-light">
+      <section
+        className="hero hero-light"
+        aria-roledescription="carousel"
+        aria-label="IAAN CONSULTANTSS service verticals"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+        onFocusCapture={() => setPaused(true)}
+        onBlurCapture={(e) => {
+          if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+            setPaused(false)
+          }
+        }}
+      >
         <div className="container hero-content">
           <div className="hero-copy-block">
             <p className="brand-lockup">
@@ -14,24 +55,60 @@ export function HomePage() {
                 alt="IAAN CONSULTANTSS"
               />
             </p>
-            <h1 className="hero-headline">
-              Industrial assurance for Indian plants and large buildings.
+            <p className="hero-slide-label" aria-live="polite">
+              <span className="hero-slide-index">{slide.index}</span>
+              {slide.title}
+            </p>
+            <h1 className="hero-headline" key={`title-${slide.id}`}>
+              {slide.heroTitle}
             </h1>
-            <p className="hero-copy">
-              Chennai-based consultancy for solar plant installation, industrial fire
-              safety, statutory compliance and ISO audit &amp; certification.
+            <p className="hero-copy" key={`lead-${slide.id}`}>
+              {slide.heroLead}
             </p>
             <div className="hero-actions">
-              <Link className="btn btn-primary" to="/services/fire-safety">
-                Explore services
+              <Link className="btn btn-primary" to={slide.path}>
+                Explore {slide.navLabel}
               </Link>
               <Link className="btn btn-outline" to="/contact">
                 Speak with us
               </Link>
             </div>
+
+            <div
+              className="hero-dots"
+              role="tablist"
+              aria-label="Choose service vertical"
+            >
+              {verticals.map((item, index) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  role="tab"
+                  className={`hero-dot${index === active ? ' is-active' : ''}`}
+                  aria-selected={index === active}
+                  aria-label={`Show ${item.title}`}
+                  onClick={() => goTo(index)}
+                />
+              ))}
+            </div>
           </div>
-          <div className="hero-aside" data-reveal>
-            <img src={asset('solar.jpg')} alt="Industrial rooftop solar installation in India" />
+
+          <div className="hero-aside hero-slider" data-reveal>
+            <div className="hero-slides" aria-live="polite" aria-atomic="true">
+              {verticals.map((item, index) => (
+                <figure
+                  key={item.id}
+                  className={`hero-slide${index === active ? ' is-active' : ''}`}
+                  aria-hidden={index !== active}
+                >
+                  <img
+                    src={item.image}
+                    alt={item.imageAlt}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                  />
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </section>
