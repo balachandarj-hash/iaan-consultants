@@ -26,6 +26,14 @@ export const clients: Client[] = [
     name: 'Aachi Group of Companies',
     logo: asset('clients/aachi-group.png'),
   },
+  {
+    name: 'Phoenix Mall',
+    logo: asset('clients/phoenix-mall.png'),
+  },
+  {
+    name: 'ESI Hospital, MGR Nagar',
+    logo: asset('clients/esi-hospital-mgr-nagar.png'),
+  },
 ]
 
 export const capabilities = [
@@ -34,7 +42,7 @@ export const capabilities = [
   'Plant & machinery valuation for banks and MSMEs',
   'Structural stability and equipment fitness',
   'Safety, energy, and compliance audits',
-  'Factory plans, layouts, and engineering advisory',
+  'Factory plans, layouts, and Engineering advisory',
 ]
 
 export type Vertical = {
@@ -66,7 +74,7 @@ export const verticals: Vertical[] = [
     navLabel: 'Solar',
     summary:
       'Engineering oversight for industrial and commercial solar plants across Tamil Nadu — from rooftop arrays on factory sheds to ground-mount systems ready for commissioning.',
-    heroTitle: 'Solar plant engineering for Indian industry',
+    heroTitle: 'Solar plant Engineering for Indian industry',
     heroLead:
       'Independent inspection and technical assurance for rooftop and ground-mount solar installations on factories, warehouses and commercial campuses.',
     image: asset('solar.jpg'),
@@ -75,7 +83,7 @@ export const verticals: Vertical[] = [
     detailAlt: 'Technicians inspecting solar arrays on an Indian factory roof',
     overview: [
       'Industrial solar programmes succeed when installation quality, structural safety and documentation are verified early — not after energisation issues appear.',
-      'IAAN CONSULTANTSS supports plant owners, EPCs and facility teams with disciplined engineering checks tailored to Indian factory roofs, sheds and ground-mount layouts.',
+      'IAAN CONSULTANTSS supports plant owners, EPCs and facility teams with disciplined Engineering checks tailored to Indian factory roofs, sheds and ground-mount layouts.',
     ],
     services: [
       {
@@ -202,7 +210,7 @@ export const verticals: Vertical[] = [
       'Statutory inspections and Chartered Engineering certifications for Indian factories, MSMEs, banks and institutions.',
     heroTitle: 'Statutory compliance for Indian factories',
     heroLead:
-      'Competent Person inspections, building stability certification, equipment fitness and plant & machinery valuation under one engineering practice.',
+      'Competent Person inspections, building stability certification, equipment fitness and plant & machinery valuation under one Engineering practice.',
     image: asset('compliance.jpg'),
     detailImage: asset('compliance-detail.jpg'),
     imageAlt: 'Industrial workers in hard hats and high-vis vests on a plant platform',
@@ -254,9 +262,9 @@ export const verticals: Vertical[] = [
     ],
     outcomes: [
       'Timely statutory inspection coverage',
-      'Credible engineering documentation for regulators and lenders',
+      'Credible Engineering documentation for regulators and lenders',
       'Reduced compliance bottlenecks for plant operations',
-      'One accountable engineering partner for multiple certificates',
+      'One accountable Engineering partner for multiple certificates',
     ],
   },
   {
