@@ -61,6 +61,41 @@ export function AboutPage() {
       <section className="section band-surface">
         <div className="container">
           <div className="section-intro" data-reveal>
+            <p className="eyebrow">Our strengths</p>
+            <h2 className="section-title">Four business verticals</h2>
+            <p className="section-lead">
+              Dedicated engineering strengths for Indian factories, warehouses, process
+              plants and large commercial buildings.
+            </p>
+          </div>
+          <div className="service-grid">
+            {verticals.map((item, index) => (
+              <article
+                key={item.id}
+                className="service-tile"
+                data-reveal
+                style={{ transitionDelay: `${index * 60}ms` }}
+              >
+                <div className="service-tile-media">
+                  <img src={item.image} alt={item.imageAlt} loading="lazy" />
+                </div>
+                <div className="service-tile-body">
+                  <p className="service-tile-index">{item.index}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.summary}</p>
+                  <Link to={item.path} className="text-link">
+                    View service <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-intro" data-reveal>
             <p className="eyebrow">Leadership</p>
             <h2 className="section-title">Leadership team</h2>
             <p className="section-lead">
@@ -150,27 +185,14 @@ export function AboutPage() {
       </section>
 
       <section className="section">
-        <div className="container dual-lists">
-          <div data-reveal>
-            <p className="eyebrow">Capabilities</p>
-            <h2 className="mini-title">Core engineering strengths</h2>
-            <ul className="check-list">
-              {capabilities.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div data-reveal>
-            <p className="eyebrow">Service lines</p>
-            <h2 className="mini-title">Four business verticals</h2>
-            <ul className="link-list">
-              {verticals.map((item) => (
-                <li key={item.id}>
-                  <Link to={item.path}>{item.title}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="container" data-reveal>
+          <p className="eyebrow">Capabilities</p>
+          <h2 className="mini-title">Core engineering strengths</h2>
+          <ul className="check-list about-capabilities">
+            {capabilities.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </div>
       </section>
 

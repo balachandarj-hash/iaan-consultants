@@ -1804,6 +1804,12 @@ em {
   font-size: 0.92rem;
 }
 
+.about-capabilities {
+  max-width: 52rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem 1.75rem;
+}
+
 @media (max-width: 960px) {
   .service-grid,
   .detail-split,
@@ -1814,7 +1820,8 @@ em {
   .contact-page-grid,
   .about-story-grid,
   .leader-block,
-  .leadership-grid {
+  .leadership-grid,
+  .about-capabilities {
     grid-template-columns: 1fr;
   }
 
