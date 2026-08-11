@@ -170,7 +170,7 @@ export function AboutPage() {
       <section className="section band-surface">
         <div className="container" data-reveal>
           <div className="section-intro center">
-            <p className="eyebrow">Selected clients</p>
+            <p className="eyebrow">PAY MASTERS</p>
             <h2 className="section-title">Organisations that work with us</h2>
           </div>
           <div className="clients-strip">

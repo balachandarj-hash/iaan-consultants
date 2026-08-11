@@ -207,7 +207,7 @@ export function HomePage() {
       <section className="section">
         <div className="container" data-reveal>
           <div className="section-intro center">
-            <p className="eyebrow">Selected clients</p>
+            <p className="eyebrow">PAY MASTERS</p>
             <h2 className="section-title">Trusted across industry</h2>
           </div>
           <div className="clients-strip">
